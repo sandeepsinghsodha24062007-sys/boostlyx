@@ -1,71 +1,59 @@
-body {
-font-family: Arial;
-margin: 0;
-background: #f5f5f5;
+body{font-family:sans-serif;margin:0;background:#f2f2f2}
+
+.header{
+background:linear-gradient(90deg,#ff00cc,#3333ff);
+color:white;
+padding:15px;
+text-align:center;
 }
 
-.header {
-background: linear-gradient(90deg,#ff3cac,#784ba0);
-color: white;
-padding: 15px;
-text-align: center;
+.hero{text-align:center;padding:30px}
+
+.tabs{text-align:center}
+.tabs button{margin:5px;padding:10px}
+
+.tab{display:none;padding:15px}
+.tab.active{display:block}
+
+.card{
+background:white;
+padding:15px;
+margin:10px;
+border-radius:10px;
+box-shadow:0 5px 15px rgba(0,0,0,0.1);
+cursor:pointer;
 }
 
-.hero {
-text-align: center;
-padding: 40px;
+.box{
+display:none;
+position:fixed;
+top:20%;
+left:10%;
+width:80%;
+background:white;
+padding:20px;
+border-radius:10px;
 }
 
-.services {
-padding: 20px;
+input{width:100%;padding:10px;margin:10px 0}
+
+button,.payBtn{
+width:100%;
+padding:12px;
+background:linear-gradient(90deg,#ff00cc,#3333ff);
+color:white;
+border:none;
+margin-top:10px;
+text-align:center;
+display:block;
 }
 
-.card {
-background: white;
-padding: 15px;
-margin: 10px;
-border-radius: 12px;
-box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-cursor: pointer;
-}
-
-.popupBox {
-display: none;
-position: fixed;
-top: 20%;
-left: 10%;
-width: 80%;
-background: white;
-padding: 20px;
-border-radius: 10px;
-box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-}
-
-input {
-width: 100%;
-padding: 10px;
-margin: 10px 0;
-}
-
-button, .payBtn {
-display: block;
-width: 100%;
-padding: 12px;
-background: linear-gradient(90deg,#ff3cac,#784ba0);
-color: white;
-border: none;
-margin-top: 10px;
-text-align: center;
-text-decoration: none;
-}
-
-.livePopup {
-position: fixed;
-bottom: 20px;
-left: 20px;
-background: black;
-color: white;
-padding: 10px;
-border-radius: 10px;
-display: none;
+.popup{
+position:fixed;
+bottom:20px;
+left:20px;
+background:black;
+color:white;
+padding:10px;
+display:none;
 }
