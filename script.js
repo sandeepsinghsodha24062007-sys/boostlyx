@@ -1,13 +1,13 @@
 function show(id){
-document.querySelectorAll('.box').forEach(e=>e.style.display='none');
-document.getElementById(id).style.display='block';
+document.querySelectorAll('.box').forEach(e=>e.classList.add('hide'));
+document.getElementById(id).classList.remove('hide');
 }
 
-let names=["Rahul","Aman","Sandeep","Rohit","Vikas"];
-let items=["10k followers","50k views","5k likes"];
-
+// LIVE POPUP
 setInterval(()=>{
-let n=names[Math.floor(Math.random()*names.length)];
-let i=items[Math.floor(Math.random()*items.length)];
-alert(n+" just bought "+i);
-},8000);
+let names=["Rohit","Aman","Vikas","Rahul"];
+let popup=document.getElementById("popup");
+popup.style.display="block";
+popup.innerText=names[Math.floor(Math.random()*names.length)]+" just bought service";
+setTimeout(()=>popup.style.display="none",2000);
+},3000);
