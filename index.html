@@ -1,161 +1,44 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+<meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Boostlyx</title>
-
-<style>
-body{
-margin:0;
-font-family:Arial;
-background:#0a0a0a;
-color:white;
-}
-
-/* HEADER */
-.header{
-padding:15px;
-text-align:center;
-font-size:22px;
-font-weight:bold;
-background:linear-gradient(90deg,#ff00cc,#3333ff);
-}
-
-/* CARD */
-.card{
-background:#151515;
-margin:15px;
-padding:15px;
-border-radius:15px;
-box-shadow:0 0 20px rgba(0,0,0,0.5);
-}
-
-/* BUTTON */
-.btn{
-background:linear-gradient(90deg,#ff00cc,#ff6600);
-padding:12px;
-border:none;
-border-radius:10px;
-color:white;
-width:100%;
-margin-top:10px;
-font-weight:bold;
-}
-
-/* INPUT */
-input{
-width:100%;
-padding:12px;
-border-radius:10px;
-border:none;
-margin-top:10px;
-}
-
-/* POPUP */
-.popup{
-position:fixed;
-bottom:20px;
-left:20px;
-background:#111;
-padding:10px 15px;
-border-radius:10px;
-display:none;
-}
-
-/* LOADER */
-.loader{
-display:none;
-text-align:center;
-padding:20px;
-}
-
-</style>
-
+<link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<div class="header">🚀 Boostlyx</div>
+<header class="header">
+  <h2>Boostlyx</h2>
+</header>
 
-<div class="card">
-<h3>🔥 Demo Offer</h3>
-<p>100 Followers ₹20</p>
-<button class="btn" onclick="order()">Buy Now</button>
-</div>
+<section class="hero">
+  <h1>Grow Your Social Media 🚀</h1>
+  <p>Fast delivery • Secure • Real Engagement</p>
+</section>
 
-<div class="card">
-<h3>Instagram Services</h3>
-<p>5K Followers ₹99</p>
-<p>10K Followers ₹159</p>
-<p>50K Followers ₹429</p>
-<button class="btn" onclick="order()">Order Now</button>
-</div>
+<section class="services">
 
-<div class="card">
-<h3>YouTube Services</h3>
-<p>1K Subs ₹100</p>
-<p>10K Views ₹170</p>
-<button class="btn" onclick="order()">Order Now</button>
-</div>
+  <div class="card">
+    <h3>Instagram</h3>
+    <p>Followers, Likes, Comments</p>
+    <a href="instagram.html">View Plans</a>
+  </div>
 
-<!-- ORDER BOX -->
-<div class="card" id="orderBox" style="display:none;">
-<h3>Enter Username</h3>
-<input placeholder="Enter Instagram Username" id="user">
-<button class="btn" onclick="pay()">Proceed to Payment</button>
-</div>
+  <div class="card">
+    <h3>YouTube</h3>
+    <p>Subscribers & Views</p>
+    <a href="youtube.html">View Plans</a>
+  </div>
 
-<!-- LOADER -->
-<div class="loader" id="loader">
-<h3>Processing Payment...</h3>
-<p>Please wait...</p>
-</div>
+  <div class="card">
+    <h3>Facebook</h3>
+    <p>Page Likes & Followers</p>
+    <a href="#">View Plans</a>
+  </div>
 
-<!-- SUCCESS -->
-<div class="card" id="done" style="display:none;">
-<h3>✅ Order Placed</h3>
-<p>We will process your order soon</p>
-</div>
-
-<!-- POPUP -->
-<div id="popup" class="popup">Arjun bought 10K followers</div>
-
-<script>
-
-/* ORDER CLICK */
-function order(){
-document.getElementById("orderBox").style.display="block";
-window.scrollTo(0,document.body.scrollHeight);
-}
-
-/* PAYMENT */
-function pay(){
-let u = document.getElementById("user").value;
-if(u==""){
-alert("Enter username");
-return;
-}
-document.getElementById("loader").style.display="block";
-
-setTimeout(()=>{
-document.getElementById("loader").style.display="none";
-document.getElementById("done").style.display="block";
-},3000);
-}
-
-/* POPUP */
-let names=["Arjun","Rahul","Vikas","Amit","Rohit","Sahil"];
-setInterval(()=>{
-let p=document.getElementById("popup");
-let n=names[Math.floor(Math.random()*names.length)];
-p.innerText=n+" bought 10K followers";
-p.style.display="block";
-
-setTimeout(()=>{p.style.display="none"},3000);
-
-},5000);
-
-</script>
+</section>
 
 </body>
 </html>
