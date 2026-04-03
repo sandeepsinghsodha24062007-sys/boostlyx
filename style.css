@@ -1,59 +1,111 @@
-body{font-family:sans-serif;margin:0;background:#f2f2f2}
+body{
+margin:0;
+font-family:sans-serif;
+background:#f4f6fb;
+}
 
 .header{
-background:linear-gradient(90deg,#ff00cc,#3333ff);
+background:linear-gradient(90deg,#ff00cc,#6a00ff);
 color:white;
 padding:15px;
 text-align:center;
+font-weight:bold;
 }
 
-.hero{text-align:center;padding:30px}
-
-.tabs{text-align:center}
-.tabs button{margin:5px;padding:10px}
-
-.tab{display:none;padding:15px}
-.tab.active{display:block}
-
-.card{
+.stats{
+display:flex;
+justify-content:space-around;
 background:white;
-padding:15px;
-margin:10px;
-border-radius:10px;
-box-shadow:0 5px 15px rgba(0,0,0,0.1);
-cursor:pointer;
-}
-
-.box{
-display:none;
-position:fixed;
-top:20%;
-left:10%;
-width:80%;
-background:white;
-padding:20px;
-border-radius:10px;
-}
-
-input{width:100%;padding:10px;margin:10px 0}
-
-button,.payBtn{
-width:100%;
 padding:12px;
-background:linear-gradient(90deg,#ff00cc,#3333ff);
-color:white;
-border:none;
-margin-top:10px;
-text-align:center;
-display:block;
+font-size:12px;
 }
 
-.popup{
-position:fixed;
-bottom:20px;
-left:20px;
+.title{
+padding:15px;
+}
+
+.platforms{
+padding:10px;
+}
+
+.platform{
+display:flex;
+justify-content:space-between;
+align-items:center;
+background:white;
+margin-bottom:12px;
+padding:15px;
+border-radius:15px;
+box-shadow:0 5px 20px rgba(0,0,0,0.08);
+border-left:6px solid;
+transition:0.3s;
+}
+
+.platform:hover{
+transform:scale(1.02);
+}
+
+.platform h3{
+margin:0;
+}
+
+.platform span{
+background:#eee;
+padding:3px 8px;
+border-radius:10px;
+font-size:12px;
+margin-left:5px;
+}
+
+.platform p{
+margin:3px 0 0;
+font-size:12px;
+color:#666;
+}
+
+.platform a{
+padding:8px 12px;
+border-radius:10px;
+color:white;
+text-decoration:none;
+font-size:12px;
+}
+
+/* COLORS */
+.pink{border-color:#ff00cc;}
+.pink a{background:#ff00cc;}
+
+.red{border-color:#ff3d3d;}
+.red a{background:#ff3d3d;}
+
+.blue{border-color:#3d7eff;}
+.blue a{background:#3d7eff;}
+
+.cyan{border-color:#00c3ff;}
+.cyan a{background:#00c3ff;}
+
+.green{border-color:#00c853;}
+.green a{background:#00c853;}
+
+.black{border-color:#333;}
+.black a{background:#333;}
+
+.sky{border-color:#00aaff;}
+.sky a{background:#00aaff;}
+
+/* SUPPORT */
+.support{
+padding:20px;
+display:flex;
+flex-direction:column;
+gap:10px;
+}
+
+.support a{
+padding:12px;
+text-align:center;
 background:black;
 color:white;
-padding:10px;
-display:none;
-}
+border-radius:10px;
+text-decoration:none;
+  }
