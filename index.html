@@ -1,44 +1,91 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-<meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Boostlyx</title>
+<title>GrowixPro</title>
 <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<header class="header">
-  <h2>Boostlyx</h2>
-</header>
+<header class="header">GrowixPro 🚀</header>
 
+<!-- HERO -->
 <section class="hero">
-  <h1>Grow Your Social Media 🚀</h1>
-  <p>Fast delivery • Secure • Real Engagement</p>
+<h1>Boost Your Social Presence</h1>
+<p>Fast • Secure • Trusted</p>
 </section>
 
+<!-- SERVICES -->
 <section class="services">
 
-  <div class="card">
-    <h3>Instagram</h3>
-    <p>Followers, Likes, Comments</p>
-    <a href="instagram.html">View Plans</a>
-  </div>
+<h2>Instagram</h2>
 
-  <div class="card">
-    <h3>YouTube</h3>
-    <p>Subscribers & Views</p>
-    <a href="youtube.html">View Plans</a>
-  </div>
+<div class="card" onclick="openService('100 followers ₹20')">100 Followers ₹20</div>
+<div class="card" onclick="openService('5K Followers ₹99')">5K Followers ₹99</div>
+<div class="card" onclick="openService('10K Followers ₹159')">10K Followers ₹159</div>
+<div class="card" onclick="openService('20K Followers ₹239')">20K Followers ₹239</div>
+<div class="card" onclick="openService('50K Followers ₹429')">50K Followers ₹429</div>
+<div class="card" onclick="openService('100K Followers ₹700')">100K Followers ₹700</div>
 
-  <div class="card">
-    <h3>Facebook</h3>
-    <p>Page Likes & Followers</p>
-    <a href="#">View Plans</a>
-  </div>
+<h2>YouTube</h2>
+
+<div class="card" onclick="openService('1K Subs ₹100')">1K Subs ₹100</div>
+<div class="card" onclick="openService('5K Subs ₹400')">5K Subs ₹400</div>
+<div class="card" onclick="openService('10K Subs ₹700')">10K Subs ₹700</div>
+<div class="card" onclick="openService('50K Subs ₹1800')">50K Subs ₹1800</div>
+
+<h2>Special Services</h2>
+
+<div class="card" onclick="openService('Blue Tick ₹399')">Instagram Blue Tick ₹399</div>
+<div class="card" onclick="openService('Active Followers ₹250')">10K Active Followers ₹250</div>
+<div class="card" onclick="openService('Monetization ₹199')">YT 4K Watchtime + 1K Subs ₹199</div>
 
 </section>
 
+<!-- ORDER FORM -->
+<div id="orderBox" class="popupBox">
+<h3 id="serviceName"></h3>
+
+<input type="text" id="userID" placeholder="Enter Instagram / YouTube Link">
+
+<p class="note">⚠️ Check your ID carefully</p>
+
+<button onclick="goPayment()">Continue</button>
+</div>
+
+<!-- PAYMENT -->
+<div id="paymentBox" class="popupBox">
+<h3>Payment</h3>
+
+<p id="finalService"></p>
+
+<a id="upiBtn" class="payBtn">Pay with UPI</a>
+
+<p>UPI: sbehhejebns@axl</p>
+
+<button onclick="startProcess()">I Paid</button>
+</div>
+
+<!-- PROCESS -->
+<div id="processBox" class="popupBox">
+<h3>Processing...</h3>
+<p>Please wait 4-5 seconds</p>
+</div>
+
+<!-- DONE -->
+<div id="doneBox" class="popupBox">
+<h3>✅ Order Placed</h3>
+<p>We will verify your payment and process order</p>
+
+<a href="https://wa.me/919376307379">WhatsApp Support</a>
+<br><br>
+<a href="https://instagram.com/ss_service_support">Instagram Support</a>
+</div>
+
+<!-- POPUP -->
+<div id="livePopup" class="livePopup"></div>
+
+<script src="script.js"></script>
 </body>
-</html>
+  </html>
