@@ -13,3 +13,6 @@ document.getElementById("done").style.display="block";
 },2000);
 
 }
+setInterval(()=>{
+alert("🔥 Arjun bought 10k followers");
+},8000);
