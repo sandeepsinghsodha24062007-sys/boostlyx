@@ -1,56 +1,41 @@
-body {
-margin:0;
+body{
 font-family:sans-serif;
-background:#f3f3f3;
+background:#f5f6fa;
+margin:0;
 text-align:center;
 }
 
-.header {
-background:linear-gradient(45deg,pink,purple);
+.header{
+background:linear-gradient(90deg,#ff00cc,#6a00ff);
 color:white;
 padding:15px;
-font-size:22px;
 }
 
-.stats {
-display:flex;
-justify-content:space-around;
+.card{
 background:white;
-padding:10px;
-}
-
-.hero {
-padding:30px;
-}
-
-.card, .plan {
-background:white;
-margin:20px;
-padding:20px;
-border-radius:15px;
+margin:15px;
+padding:15px;
+border-radius:10px;
 box-shadow:0 5px 15px rgba(0,0,0,0.1);
 }
 
-.btn {
-display:inline-block;
+.btn{
+display:block;
 margin-top:10px;
-padding:10px 20px;
-background:linear-gradient(45deg,pink,purple);
+padding:10px;
+background:linear-gradient(90deg,#ff00cc,#6a00ff);
 color:white;
-border:none;
-border-radius:10px;
 text-decoration:none;
+border-radius:8px;
 }
 
-.input {
+input{
 padding:10px;
 width:80%;
-margin:15px;
-border-radius:10px;
-border:1px solid #ccc;
+margin:10px;
 }
 
-.loading, .success {
+#loading,#done{
 display:none;
 margin-top:20px;
 }
