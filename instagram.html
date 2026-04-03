@@ -1,29 +1,50 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="style.css?v=10">
+<title>Instagram Services</title>
+<link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-<div class="header">Instagram Services</div>
+<div class="header">📸 Instagram Services</div>
 
-<div class="card">
-<div>
-100 Followers<br><small>For Demo</small>
-</div>
-<div>
-<span class="price">₹20</span><br>
-<a href="order.html?service=100 Followers&price=20" class="btn">Buy</a>
-</div>
+<div class="tabs">
+<button onclick="show('followers')">Followers</button>
+<button onclick="show('likes')">Likes</button>
+<button onclick="show('views')">Views</button>
+<button onclick="show('special')">⭐ Special</button>
 </div>
 
-<div class="card">
-<div>5k Followers</div>
-<div><span class="price">₹99</span><br>
-<a href="order.html?service=5k Followers&price=99" class="btn">Buy</a></div>
+<div id="followers" class="box">
+<div class="item">100 Followers (Demo) ₹20 <a href="order.html?price=20" class="buy">Buy</a></div>
+<div class="item">5k Followers ₹99 <a href="order.html?price=99" class="buy">Buy</a></div>
+<div class="item">10k Followers ₹159 <a href="order.html?price=159" class="buy">Buy</a></div>
+<div class="item">20k Followers ₹239 <a href="order.html?price=239" class="buy">Buy</a></div>
+<div class="item">50k Followers ₹429 <a href="order.html?price=429" class="buy">Buy</a></div>
+<div class="item">100k Followers ₹700 <a href="order.html?price=700" class="buy">Buy</a></div>
 </div>
 
+<div id="likes" class="box" style="display:none;">
+<div class="item">10k Likes ₹80 <a href="order.html?price=80" class="buy">Buy</a></div>
+<div class="item">20k Likes ₹140 <a href="order.html?price=140" class="buy">Buy</a></div>
+<div class="item">50k Likes ₹250 <a href="order.html?price=250" class="buy">Buy</a></div>
+<div class="item">100k Likes ₹350 <a href="order.html?price=350" class="buy">Buy</a></div>
+</div>
+
+<div id="views" class="box" style="display:none;">
+<div class="item">10k Views ₹40 <a href="order.html?price=40" class="buy">Buy</a></div>
+<div class="item">20k Views ₹60 <a href="order.html?price=60" class="buy">Buy</a></div>
+<div class="item">50k Views ₹100 <a href="order.html?price=100" class="buy">Buy</a></div>
+<div class="item">100k Views ₹150 <a href="order.html?price=150" class="buy">Buy</a></div>
+<div class="item">500k Views ₹250 <a href="order.html?price=250" class="buy">Buy</a></div>
+</div>
+
+<div id="special" class="box" style="display:none;">
+<div class="item">✔ Blue Tick ₹399 <a href="order.html?price=399" class="buy">Buy</a></div>
+<div class="item">🔥 10k Active Followers ₹250 <a href="order.html?price=250" class="buy">Buy</a></div>
+<div class="item">🔥 50k Active Followers ₹500 <a href="order.html?price=500" class="buy">Buy</a></div>
+</div>
+
+<script src="script.js"></script>
 </body>
 </html>
