@@ -6,15 +6,32 @@
 </head>
 <body>
 
+<div class="order-box">
 <h2>Enter Instagram ID</h2>
-<input id="id" placeholder="Enter username">
 
-<button class="btn" onclick="pay()">Pay Now</button>
+<p class="note">
+• ID must be public<br>
+• Check username carefully<br>
+• No private account
+</p>
 
-<div id="loading">Processing...</div>
-<div id="done">✅ Order Placed! Wait 30 min</div>
+<input type="text" id="user" placeholder="Enter username">
 
-<script src="script.js"></script>
+<button onclick="next()">Continue</button>
+</div>
+
+<script>
+function next(){
+let user = document.getElementById("user").value;
+if(user==""){ alert("Enter ID"); return;}
+
+let params = new URLSearchParams(window.location.search);
+let service = params.get("service");
+let price = params.get("price");
+
+window.location = "pay.html?service="+service+"&price="+price+"&user="+user;
+}
+</script>
 
 </body>
 </html>
