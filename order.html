@@ -1,35 +1,28 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Order</title>
-<link rel="stylesheet" href="style.css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="style.css?v=10">
 </head>
+
 <body>
 
-<div class="order-box">
-<h2>Enter Instagram ID</h2>
+<div class="header">Enter Details</div>
 
-<p class="note">
-• ID must be public<br>
-• Check username carefully<br>
-• No private account
-</p>
+<div class="service">
+<p>Enter your correct Instagram ID</p>
+<p>Account must be public</p>
 
 <input type="text" id="user" placeholder="Enter username">
 
-<button onclick="next()">Continue</button>
+<button class="btn big-btn" onclick="go()">Continue</button>
 </div>
 
 <script>
-function next(){
-let user = document.getElementById("user").value;
-if(user==""){ alert("Enter ID"); return;}
-
-let params = new URLSearchParams(window.location.search);
-let service = params.get("service");
-let price = params.get("price");
-
-window.location = "pay.html?service="+service+"&price="+price+"&user="+user;
+function go(){
+let u=document.getElementById("user").value;
+if(u==""){alert("Enter ID"); return;}
+window.location="payment.html?user="+u+window.location.search;
 }
 </script>
 
