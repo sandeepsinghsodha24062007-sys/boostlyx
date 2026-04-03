@@ -1,111 +1,47 @@
-body{
+body {
+font-family: Arial;
+background: #f5f5f5;
 margin:0;
-font-family:sans-serif;
-background:#f4f6fb;
-}
-
-.header{
-background:linear-gradient(90deg,#ff00cc,#6a00ff);
-color:white;
-padding:15px;
 text-align:center;
-font-weight:bold;
 }
 
-.stats{
+.top {
+background: linear-gradient(to right, pink, purple);
+color:white;
+padding:20px;
+font-size:22px;
+}
+
+.stats {
 display:flex;
 justify-content:space-around;
-background:white;
-padding:12px;
-font-size:12px;
-}
-
-.title{
 padding:15px;
-}
-
-.platforms{
-padding:10px;
-}
-
-.platform{
-display:flex;
-justify-content:space-between;
-align-items:center;
 background:white;
-margin-bottom:12px;
-padding:15px;
-border-radius:15px;
-box-shadow:0 5px 20px rgba(0,0,0,0.08);
-border-left:6px solid;
-transition:0.3s;
 }
 
-.platform:hover{
-transform:scale(1.02);
-}
-
-.platform h3{
-margin:0;
-}
-
-.platform span{
-background:#eee;
-padding:3px 8px;
-border-radius:10px;
-font-size:12px;
-margin-left:5px;
-}
-
-.platform p{
-margin:3px 0 0;
-font-size:12px;
-color:#666;
-}
-
-.platform a{
-padding:8px 12px;
-border-radius:10px;
-color:white;
-text-decoration:none;
-font-size:12px;
-}
-
-/* COLORS */
-.pink{border-color:#ff00cc;}
-.pink a{background:#ff00cc;}
-
-.red{border-color:#ff3d3d;}
-.red a{background:#ff3d3d;}
-
-.blue{border-color:#3d7eff;}
-.blue a{background:#3d7eff;}
-
-.cyan{border-color:#00c3ff;}
-.cyan a{background:#00c3ff;}
-
-.green{border-color:#00c853;}
-.green a{background:#00c853;}
-
-.black{border-color:#333;}
-.black a{background:#333;}
-
-.sky{border-color:#00aaff;}
-.sky a{background:#00aaff;}
-
-/* SUPPORT */
-.support{
+.card {
+background:white;
+margin:20px;
 padding:20px;
-display:flex;
-flex-direction:column;
-gap:10px;
+border-radius:15px;
+box-shadow:0 0 10px rgba(0,0,0,0.1);
 }
 
-.support a{
-padding:12px;
-text-align:center;
-background:black;
+.btn {
+display:inline-block;
+margin-top:10px;
+padding:10px 20px;
+background: linear-gradient(to right, pink, purple);
 color:white;
+border:none;
 border-radius:10px;
 text-decoration:none;
-  }
+}
+
+.input {
+padding:10px;
+width:80%;
+margin:10px;
+border-radius:10px;
+border:1px solid #ccc;
+}
