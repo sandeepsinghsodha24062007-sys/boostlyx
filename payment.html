@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="style.css?v=10">
+</head>
+
+<body>
+
+<div class="header">Payment Here</div>
+
+<div class="service">
+<h2 id="service"></h2>
+<h1 id="price"></h1>
+
+<a id="pay" class="btn big-btn">Click here to Pay Securely</a>
+
+<p>UPI: sbehhejebns@axl</p>
+<p>If you pay via UPI, send screenshot on WhatsApp</p>
+</div>
+
+<script>
+let url=new URLSearchParams(window.location.search);
+let service=url.get("service");
+let price=url.get("price");
+
+document.getElementById("service").innerText=service;
+document.getElementById("price").innerText="₹"+price;
+
+document.getElementById("pay").href=
+"upi://pay?pa=sbehhejebns@ibl&pn=SANDEEP&am="+price;
+</script>
+
+</body>
+</html>
