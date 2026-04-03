@@ -1,28 +1,24 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="style.css?v=10">
+<link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
 <div class="header">Enter Details</div>
 
-<div class="service">
-<p>Enter your correct Instagram ID</p>
-<p>Account must be public</p>
-
+<div class="card">
+<p>⚠ Enter correct Instagram ID</p>
 <input type="text" id="user" placeholder="Enter username">
-
-<button class="btn big-btn" onclick="go()">Continue</button>
+<button onclick="go()">Continue</button>
 </div>
 
 <script>
 function go(){
 let u=document.getElementById("user").value;
-if(u==""){alert("Enter ID"); return;}
-window.location="payment.html?user="+u+window.location.search;
+if(u==""){alert("Enter ID");return;}
+let p=new URLSearchParams(window.location.search).get("price");
+window.location="payment.html?price="+p;
 }
 </script>
 
