@@ -2,89 +2,118 @@
 <html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>GrowixPro</title>
+<title>BoostoraX</title>
 <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<header class="header">GrowixPro 🚀</header>
+<header class="header">
+BoostoraX 🚀
+</header>
 
-<!-- HERO -->
 <section class="hero">
-<h1>Boost Your Social Presence</h1>
+<h1>Boost Your Social Media</h1>
 <p>Fast • Secure • Trusted</p>
 </section>
 
-<!-- SERVICES -->
-<section class="services">
+<!-- CATEGORY -->
+<div class="tabs">
+<button onclick="showTab('insta')">Instagram</button>
+<button onclick="showTab('yt')">YouTube</button>
+<button onclick="showTab('special')">Special</button>
+</div>
 
-<h2>Instagram</h2>
+<!-- INSTAGRAM -->
+<div id="insta" class="tab active">
 
-<div class="card" onclick="openService('100 followers ₹20')">100 Followers ₹20</div>
-<div class="card" onclick="openService('5K Followers ₹99')">5K Followers ₹99</div>
-<div class="card" onclick="openService('10K Followers ₹159')">10K Followers ₹159</div>
-<div class="card" onclick="openService('20K Followers ₹239')">20K Followers ₹239</div>
-<div class="card" onclick="openService('50K Followers ₹429')">50K Followers ₹429</div>
-<div class="card" onclick="openService('100K Followers ₹700')">100K Followers ₹700</div>
+<h3>Followers</h3>
+<div class="card" onclick="openOrder('100 Followers ₹20')">100 Followers ₹20</div>
+<div class="card" onclick="openOrder('5K Followers ₹99')">5K Followers ₹99</div>
+<div class="card" onclick="openOrder('10K Followers ₹159')">10K Followers ₹159</div>
+<div class="card" onclick="openOrder('20K Followers ₹239')">20K Followers ₹239</div>
+<div class="card" onclick="openOrder('50K Followers ₹429')">50K Followers ₹429</div>
+<div class="card" onclick="openOrder('100K Followers ₹700')">100K Followers ₹700</div>
 
-<h2>YouTube</h2>
+<h3>Likes</h3>
+<div class="card" onclick="openOrder('10K Likes ₹80')">10K Likes ₹80</div>
+<div class="card" onclick="openOrder('20K Likes ₹140')">20K Likes ₹140</div>
+<div class="card" onclick="openOrder('50K Likes ₹250')">50K Likes ₹250</div>
+<div class="card" onclick="openOrder('100K Likes ₹350')">100K Likes ₹350</div>
 
-<div class="card" onclick="openService('1K Subs ₹100')">1K Subs ₹100</div>
-<div class="card" onclick="openService('5K Subs ₹400')">5K Subs ₹400</div>
-<div class="card" onclick="openService('10K Subs ₹700')">10K Subs ₹700</div>
-<div class="card" onclick="openService('50K Subs ₹1800')">50K Subs ₹1800</div>
+<h3>Views</h3>
+<div class="card" onclick="openOrder('10K Views ₹40')">10K Views ₹40</div>
+<div class="card" onclick="openOrder('20K Views ₹60')">20K Views ₹60</div>
+<div class="card" onclick="openOrder('50K Views ₹100')">50K Views ₹100</div>
+<div class="card" onclick="openOrder('100K Views ₹150')">100K Views ₹150</div>
+<div class="card" onclick="openOrder('500K Views ₹250')">500K Views ₹250</div>
 
-<h2>Special Services</h2>
+</div>
 
-<div class="card" onclick="openService('Blue Tick ₹399')">Instagram Blue Tick ₹399</div>
-<div class="card" onclick="openService('Active Followers ₹250')">10K Active Followers ₹250</div>
-<div class="card" onclick="openService('Monetization ₹199')">YT 4K Watchtime + 1K Subs ₹199</div>
+<!-- YOUTUBE -->
+<div id="yt" class="tab">
 
-</section>
+<h3>Subscribers</h3>
+<div class="card" onclick="openOrder('1K Subs ₹100')">1K Subs ₹100</div>
+<div class="card" onclick="openOrder('5K Subs ₹400')">5K Subs ₹400</div>
+<div class="card" onclick="openOrder('10K Subs ₹700')">10K Subs ₹700</div>
+<div class="card" onclick="openOrder('50K Subs ₹1800')">50K Subs ₹1800</div>
 
-<!-- ORDER FORM -->
-<div id="orderBox" class="popupBox">
+<h3>Views</h3>
+<div class="card" onclick="openOrder('5K Views ₹100')">5K Views ₹100</div>
+<div class="card" onclick="openOrder('10K Views ₹170')">10K Views ₹170</div>
+<div class="card" onclick="openOrder('50K Views ₹500')">50K Views ₹500</div>
+<div class="card" onclick="openOrder('100K Views ₹800')">100K Views ₹800</div>
+<div class="card" onclick="openOrder('1M Views ₹2500')">1M Views ₹2500</div>
+
+</div>
+
+<!-- SPECIAL -->
+<div id="special" class="tab">
+
+<div class="card" onclick="openOrder('Blue Tick ₹399')">Instagram Blue Tick ₹399 (Lifetime)</div>
+<div class="card" onclick="openOrder('10K Active ₹250')">10K Active Followers ₹250</div>
+<div class="card" onclick="openOrder('50K Active ₹500')">50K Active Followers ₹500</div>
+<div class="card" onclick="openOrder('YT Monetization ₹199')">YT 1K Subs + 4K Watchtime ₹199</div>
+
+</div>
+
+<!-- ORDER BOX -->
+<div id="orderBox" class="box">
 <h3 id="serviceName"></h3>
-
-<input type="text" id="userID" placeholder="Enter Instagram / YouTube Link">
-
-<p class="note">⚠️ Check your ID carefully</p>
-
-<button onclick="goPayment()">Continue</button>
+<input id="userLink" placeholder="Enter your profile link">
+<p>⚠️ Check your ID carefully before submitting</p>
+<button onclick="goPay()">Continue</button>
 </div>
 
 <!-- PAYMENT -->
-<div id="paymentBox" class="popupBox">
+<div id="payBox" class="box">
 <h3>Payment</h3>
-
 <p id="finalService"></p>
 
 <a id="upiBtn" class="payBtn">Pay with UPI</a>
 
 <p>UPI: sbehhejebns@axl</p>
 
-<button onclick="startProcess()">I Paid</button>
+<button onclick="processing()">I Paid</button>
 </div>
 
 <!-- PROCESS -->
-<div id="processBox" class="popupBox">
+<div id="processBox" class="box">
 <h3>Processing...</h3>
-<p>Please wait 4-5 seconds</p>
+<p>Please wait</p>
 </div>
 
 <!-- DONE -->
-<div id="doneBox" class="popupBox">
+<div id="doneBox" class="box">
 <h3>✅ Order Placed</h3>
-<p>We will verify your payment and process order</p>
+<p>Please wait we will check payment & process your order</p>
 
-<a href="https://wa.me/919376307379">WhatsApp Support</a>
-<br><br>
-<a href="https://instagram.com/ss_service_support">Instagram Support</a>
+<a href="https://wa.me/919376307379">WhatsApp</a><br>
+<a href="https://instagram.com/ss_service_support">Instagram</a>
 </div>
 
-<!-- POPUP -->
-<div id="livePopup" class="livePopup"></div>
+<div id="popup" class="popup"></div>
 
 <script src="script.js"></script>
 </body>
