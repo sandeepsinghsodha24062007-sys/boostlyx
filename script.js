@@ -1,28 +1,29 @@
-let selectedService = ""
+function showTab(id){
+document.querySelectorAll('.tab').forEach(e=>e.classList.remove('active'))
+document.getElementById(id).classList.add('active')
+}
 
-function openService(name){
-selectedService = name
+let selected=""
+
+function openOrder(name){
+selected=name
 document.getElementById("orderBox").style.display="block"
 document.getElementById("serviceName").innerText=name
 }
 
-function goPayment(){
-let id = document.getElementById("userID").value
-
-if(id.length < 5){
-alert("Enter valid ID")
-return
-}
+function goPay(){
+let link=document.getElementById("userLink").value
+if(link.length<5){alert("Enter valid link");return}
 
 document.getElementById("orderBox").style.display="none"
-document.getElementById("paymentBox").style.display="block"
-document.getElementById("finalService").innerText=selectedService
+document.getElementById("payBox").style.display="block"
+document.getElementById("finalService").innerText=selected
 
 document.getElementById("upiBtn").href="upi://pay?pa=sbehhejebns@ibl&pn=SANDEEP%20SINGH"
 }
 
-function startProcess(){
-document.getElementById("paymentBox").style.display="none"
+function processing(){
+document.getElementById("payBox").style.display="none"
 document.getElementById("processBox").style.display="block"
 
 setTimeout(()=>{
@@ -31,23 +32,14 @@ document.getElementById("doneBox").style.display="block"
 },4000)
 }
 
-/* LIVE POPUP */
-
-let names = ["Rahul","Amit","Rohit","Arjun","Vikas","Sandeep","Karan"]
-
-let services = ["10K Followers","5K Likes","1K Subs","50K Views"]
+/* POPUP */
+let names=["Rahul","Amit","Arjun","Vikas","Karan","Sandeep"]
+let items=["10K Followers","5K Likes","1K Subs","50K Views"]
 
 setInterval(()=>{
-let name = names[Math.floor(Math.random()*names.length)]
-let service = services[Math.floor(Math.random()*services.length)]
+let p=document.getElementById("popup")
+p.innerText=names[Math.floor(Math.random()*names.length)]+" bought "+items[Math.floor(Math.random()*items.length)]
+p.style.display="block"
 
-let popup = document.getElementById("livePopup")
-popup.innerText = name + " bought " + service
-
-popup.style.display="block"
-
-setTimeout(()=>{
-popup.style.display="none"
-},3000)
-
-},7000)
+setTimeout(()=>{p.style.display="none"},3000)
+},6000)
