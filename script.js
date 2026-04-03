@@ -1,19 +1,16 @@
-function show(id){
-document.querySelectorAll(".section").forEach(s=>s.style.display="none");
-document.getElementById(id).style.display="block";
-}
-
-let names=["Rahul","Aman","Sandeep","Rohit","Vikas"];
-let services=["5k followers","10k views","1k subs","50k likes"];
+let names = ["Rahul","Aman","Suresh","Vikas","Rohit","Ankit"];
+let services = ["10k followers","50k views","5k likes","20k followers"];
 
 setInterval(()=>{
-let n = names[Math.floor(Math.random()*names.length)];
-let s = services[Math.floor(Math.random()*services.length)];
+let name = names[Math.floor(Math.random()*names.length)];
+let service = services[Math.floor(Math.random()*services.length)];
 
-let pop = document.getElementById("popup");
-pop.innerText = n+" bought "+s;
-pop.style.display="block";
+let popup = document.getElementById("popup");
+popup.innerHTML = name+" just bought "+service;
+popup.style.display="block";
 
-setTimeout(()=>pop.style.display="none",3000);
+setTimeout(()=>{
+popup.style.display="none";
+},3000);
 
-},6000);
+},7000);
