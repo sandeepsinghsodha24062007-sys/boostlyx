@@ -1,152 +1,125 @@
 body{
-font-family: 'Segoe UI', sans-serif;
-background:#f5f6fa;
 margin:0;
+font-family:sans-serif;
+background:#f4f6fb;
 }
 
 /* HEADER */
 .header{
 background:linear-gradient(90deg,#ff00cc,#6a00ff);
 color:white;
-padding:18px;
 text-align:center;
+padding:18px;
 font-size:24px;
 font-weight:bold;
-letter-spacing:1px;
 }
 
 /* STATS */
 .stats{
 display:flex;
 justify-content:space-around;
-padding:12px;
-font-size:15px;
-background:white;
 margin:10px;
+background:white;
+padding:12px;
 border-radius:12px;
-box-shadow:0 5px 15px rgba(0,0,0,0.08);
+box-shadow:0 5px 15px rgba(0,0,0,0.1);
 }
 
 /* HERO */
 .hero{
 text-align:center;
-padding:40px 20px;
-}
-.hero h1{
-font-size:28px;
-margin-bottom:10px;
-}
-.hero p{
-color:#666;
-font-size:16px;
+padding:30px;
+animation:fade 1s;
 }
 
-/* SERVICE BOX */
-.service-box{
+/* SERVICE */
+.service{
 background:white;
-padding:22px;
-border-radius:18px;
-margin:15px;
-box-shadow:0 8px 20px rgba(0,0,0,0.08);
-}
-.service-box h2{
-font-size:22px;
-margin-bottom:5px;
+margin:20px;
+padding:25px;
+border-radius:20px;
+box-shadow:0 10px 25px rgba(0,0,0,0.1);
+text-align:center;
 }
 
-/* BIG BUTTON */
+/* BUTTON */
 .btn{
 background:linear-gradient(90deg,#ff00cc,#6a00ff);
 color:white;
 padding:14px 28px;
 border-radius:30px;
 text-decoration:none;
-display:inline-block;
-font-size:16px;
 font-weight:bold;
+display:inline-block;
 margin-top:10px;
+transition:0.3s;
 }
 
-/* RED BUTTON */
+.btn:hover{
+transform:scale(1.05);
+}
+
+.big-btn{
+font-size:18px;
+padding:16px 35px;
+}
+
 .red{
 background:#ff2d2d;
 }
 
-/* CARDS */
+/* CARD */
 .card{
 background:white;
-margin:15px;
+margin:18px;
 padding:20px;
 border-radius:18px;
 display:flex;
 justify-content:space-between;
 align-items:center;
-box-shadow:0 8px 20px rgba(0,0,0,0.08);
-font-size:17px;
-}
-
-/* PRICE */
-.card b{
+box-shadow:0 10px 25px rgba(0,0,0,0.1);
 font-size:18px;
 }
 
-/* BUY BUTTON FIX 🔥 */
-.card .btn{
-padding:10px 18px;
-font-size:14px;
-}
-
-/* TABS */
-.tabs{
-display:flex;
-justify-content:space-around;
-padding:12px;
-}
-.tabs button{
-padding:10px 16px;
-border:none;
-background:#eee;
-border-radius:20px;
+.price{
 font-weight:bold;
+font-size:20px;
 }
 
-/* ORDER PAGE */
-.order-box,.pay-box{
-background:white;
-margin:40px 15px;
-padding:25px;
-border-radius:18px;
-text-align:center;
-box-shadow:0 8px 20px rgba(0,0,0,0.08);
-}
-
+/* INPUT */
 input{
 width:90%;
 padding:14px;
-margin:15px 0;
 border-radius:10px;
-border:1px solid #ccc;
+border:2px solid #ddd;
+margin:15px 0;
 font-size:16px;
 }
 
-/* FLOAT BUTTONS */
-.whatsapp,.insta{
+input:focus{
+border-color:#6a00ff;
+outline:none;
+}
+
+/* FLOAT */
+.whatsapp{
 position:fixed;
-right:12px;
-padding:12px;
-border-radius:50%;
-color:white;
+right:15px;
 bottom:20px;
-font-size:18px;
+background:#25D366;
+color:white;
+padding:15px;
+border-radius:50%;
 }
 
 .insta{
+position:fixed;
+right:15px;
 bottom:80px;
 background:linear-gradient(45deg,#ff00cc,#ff6600);
-}
-
-.whatsapp{
-background:#25D366;
+color:white;
+padding:15px;
+border-radius:50%;
 }
 
 /* POPUP */
@@ -156,8 +129,14 @@ bottom:20px;
 left:10px;
 background:black;
 color:white;
-padding:12px;
+padding:10px;
 border-radius:10px;
-font-size:13px;
 display:none;
+font-size:13px;
 }
+
+/* ANIMATION */
+@keyframes fade{
+from{opacity:0;}
+to{opacity:1;}
+  }
