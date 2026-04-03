@@ -1,34 +1,32 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="style.css?v=10">
+<link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-<div class="header">Payment Here</div>
+<div class="header">Payment</div>
 
-<div class="service">
-<h2 id="service"></h2>
+<div class="card">
 <h1 id="price"></h1>
 
-<a id="pay" class="btn big-btn">Click here to Pay Securely</a>
+<a href="upi://pay?pa=sbehhejebns@ibl&pn=SANDEEP%20SINGH" class="btn">Pay Now</a>
 
 <p>UPI: sbehhejebns@axl</p>
+
+<button onclick="copy()">Copy UPI</button>
+
 <p>If you pay via UPI, send screenshot on WhatsApp</p>
 </div>
 
 <script>
-let url=new URLSearchParams(window.location.search);
-let service=url.get("service");
-let price=url.get("price");
+let p=new URLSearchParams(window.location.search).get("price");
+document.getElementById("price").innerText="₹"+p;
 
-document.getElementById("service").innerText=service;
-document.getElementById("price").innerText="₹"+price;
-
-document.getElementById("pay").href=
-"upi://pay?pa=sbehhejebns@ibl&pn=SANDEEP&am="+price;
+function copy(){
+navigator.clipboard.writeText("sbehhejebns@axl");
+alert("Copied");
+}
 </script>
 
 </body>
