@@ -1,32 +1,33 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Boostlyx 🚀</title>
+<title>BOOSTLYX 🚀</title>
 <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-<div class="header">🚀 BOOSTLYX</div>
+<header>🚀 BOOSTLYX</header>
 
 <div class="stats">
-  <div>🔥 2500+ Orders</div>
-  <div>⚡ 24/7 Support</div>
-  <div>💎 Trusted</div>
+  <div class="stat">🔥 2500+ Orders</div>
+  <div class="stat">⚡ 24/7 Support</div>
+  <div class="stat">💎 Trusted</div>
 </div>
 
-<h1>Grow Your Social Media 🚀</h1>
+<h2 class="title">Grow Your Social Media 🚀</h2>
 
-<div class="card">
-  <h2>📸 Instagram Services</h2>
-  <p>Followers • Likes • Views</p>
-  <a href="instagram.html" class="btn">View Plans</a>
+<div class="card main" onclick="location.href='instagram.html'">
+  <div class="left">📸 Instagram Services</div>
+  <button class="btn">View Plans →</button>
 </div>
 
-<div class="card">
-  <h2>🎥 YouTube Services</h2>
-  <p>Subscribers • Views</p>
-  <a href="youtube.html" class="btn red">View Plans</a>
+<div class="card main" onclick="location.href='youtube.html'">
+  <div class="left">▶️ YouTube Services</div>
+  <button class="btn red">View Plans →</button>
 </div>
+
+<div id="popup"></div>
 
 <script src="script.js"></script>
 </body>
